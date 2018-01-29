@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
@@ -43,15 +44,18 @@ public class Rocket : MonoBehaviour
                 print("Ok"); //TODO remove this line
                 break;
 
-            case "Fuel":
+			case "Finish":
 
-                print("Power on");
+				print ("Great job!");
+				SceneManager.LoadScene (1);
 
                 break;
 
             default:
 
                 print("Game over");
+				SceneManager.LoadScene (0);
+
 
                 break;
         }
